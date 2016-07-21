@@ -36,7 +36,9 @@ class Catchem:
 	def findem(self, max_seconds_left = 9999, max_distance = 1):
 		''' Filters list of pokemon near by based on parameters '''
 		self.pokemon_near_filtered = [p for p in self.pokemon_near if p['seconds_left'] < max_seconds_left and p['distance_miles'] < max_distance]
-		[print(x['name']) for x in self.pokemon_near_filtered]
+		print('payload={"channel": "#pkmn", "username": "webhookbot", "text": ' + '"' + str([x['name'] for x in self.pokemon_near_filtered]) + '"' + ', "icon_emoji": ":ghost:"}')
+
+
 
 
 if __name__ == '__main__':

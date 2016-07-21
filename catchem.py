@@ -39,8 +39,6 @@ class Catchem:
 		print('payload={"channel": "#pkmn", "username": "webhookbot", "text": ' + '"' + str([x['name'] for x in self.pokemon_near_filtered]) + '"' + ', "icon_emoji": ":ghost:"}')
 
 
-
-
 if __name__ == '__main__':
 	catchem = Catchem()
 	catchem.loadem()
